@@ -1,51 +1,42 @@
-VARIABILE:
+This project is a Java application that calculates the score of children based on their behavior and gift preferences. The program reads data from JSON files containing information about children, their ages, behaviors, and gift preferences, and calculates their average score. The program also calculates the total score of cities based on the average score of their children.
 
-iterator, sumPonder, averageSum = varabile folosite pentru calcularea scorului average
-budgetUnit, spent = variabile folosite pentru calcularea bugetului
+Requirements
+Java 8 or higher
+Jackson Databind Library
+How to use
+Clone the repository to your local machine
+Install the Jackson Databind Library
+Create JSON files containing information about children, their ages, behaviors, and gift preferences in the tests directory
+Run the Main class to calculate the scores
+The program will read each JSON file in the tests directory and calculate the average score of each child. It will also calculate the total score of each city based on the average score of their children. The program will output the results to the console.
 
-input = varabila pentru citirea inputului
+Classes
+Main
+This is the main class of the program. It reads the input data from the JSON files and calculates the scores of the children.
 
-cityNameList = lista de orase
-scoreListNew = lista de obiecte care contin id si scor
-newList = lista folosita pentru a copia copii folosind copy constructor, pentru output
-cityList = lista de obiecte de tip City, folosita pentru a ordona orasele dupa scor si nume
-listaCadouri = lista folosita pentru alocarea cadourilor in functia assignGifts
-spent = varabila folosita in functia assignGifts pentru a calcula suma de bani consumati pe cadourile unui copil
+Checker
+This class contains the methods used to calculate the score of each child.
 
-FUNCTII:
+Input
+This class represents the input data read from the JSON files.
 
-assignGifts 
-	- se verifica daca copilul are pana in 18 ani
-	- se itereaza prin lista de preferinte a copilului
-	- se completeaza variabila listaCadouri cu cadouri care coincid cu preferintele copilului
-	- se gaseste cel mai ieftin cadou din listaCadouri
-	- se verifica daca acel cadou are cantitatea mai mare decat 0 si daca copilul are bugetul necesar pentru a cumpara acel cadou, caz in care cadoul este adaugat in lista de cadouri a copilului, cantitatea cadoului este decrementata si valoarea cadoului este adaugata in variabila spent.
-	
-PROGRAM:
+Output
+This class represents the output data calculated by the program.
 
-primul for este pentru inputuri, fiecare iteratie reprezinta rezolvarea unui input
+Child
+This class represents a child and contains information about their age, behavior, and gift preferences.
 
-al doilea for este pentru a itera prin numarul de ani, j reprezinta numarul anului curent
+ChildUpdate
+This class represents an update to a child's behavior or gift preferences.
 
-se verifica daca anul curent nu este anul 0, caz in care se face update listei de copii, preferintele copiilor, elfului copiilor, listei cu nice scoreuri ale copiilor, bugetului mosului si listei de cadouri ale mosului
+Score
+This class represents the score of a child.
 
-urmatorul for clasifica copiii in functie de varsta lor si calculeaza nice score-ul in functie de aceasta, dupa care se adauga orasele copiilor in lista de orase, si score-urile impreuna cu id-ul in lista scoreListNew.
+Present
+This class represents a gift.
 
-urmatorul for calculeaza media de scor pentru fiecare oras
+City
+This class represents a city and contains information about the average score of its children.
 
-se face sortarea in mod descrescator a oraselor in functie de average score si numele orasului
-
-este calculat budgetUnitul in functie de buget si suma scorurilor tututor copiilor
-
-se face sortarea in mod descrescator a listei de score-uri in functie de scor si id
-
-urmatorul for aplica modificarile aduse bugetului copiilor pentru copiii care au elfi de tip BLACK si PINK
-
-in functie de strategia de alocare a cadourilor pentru anul respectiv se face alocarea cadourilor folosind functia assignGifts. 
-
-se imarte un cadou copiilor cu elful YELLOW daca este disponibil.
-
-se copiaza lista de copii in in variabila newList folosind copy construcotr pentru a nu se modifica aceasta lista la urmatoare iteratie.
-
-se adauga newList intr-o lista de liste folosita petnru output.
-se golesc toate listele folosite pentru a fi folosite iar in urmatoarea iteratie.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
