@@ -36,6 +36,3 @@ The project uses the following dependencies:
 com.fasterxml.jackson.databind.ObjectMapper: a library used to read the input data from the test*.json files
 
 To compile and run the program, make sure that these dependencies are installed and included in the classpath.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
