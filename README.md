@@ -1,42 +1,28 @@
-This project is a Java application that calculates the score of children based on their behavior and gift preferences. The program reads data from JSON files containing information about children, their ages, behaviors, and gift preferences, and calculates their average score. The program also calculates the total score of cities based on the average score of their children.
+Project Description
+This is a Java project for a Christmas gift distribution program. The program receives input data about children's preferences and nice scores, as well as updates to this data for subsequent years, and then calculates a score for each child based on their average nice score and age group. The program also calculates the total score for each city based on the average score of its children and the number of children in the city.
 
-Requirements
-Java 8 or higher
-Jackson Databind Library
-How to use
-Clone the repository to your local machine
-Install the Jackson Databind Library
-Create JSON files containing information about children, their ages, behaviors, and gift preferences in the tests directory
-Run the Main class to calculate the scores
-The program will read each JSON file in the tests directory and calculate the average score of each child. It will also calculate the total score of each city based on the average score of their children. The program will output the results to the console.
+The project contains the following files:
 
-Classes
-Main
-This is the main class of the program. It reads the input data from the JSON files and calculates the scores of the children.
+Main.java: the main class used to run the program and call the Checker class to calculate the score
+Input.java: a class used to represent the input data
+Output.java: a class used to represent the output data
+Child.java: a class used to represent the children's data, such as id, name, age, city, nice scores, and preferences
+ChildUpdate.java: a class used to represent the updates to the children's data for subsequent years
+AnnualChanges.java: a class used to represent the updates to the children's data for each year
+Score.java: a class used to represent the children's scores, with id and average score
+City.java: a class used to represent the cities' scores, with city name, total score, and number of people
+Present.java: a class used to represent the presents' data, such as id, name, size, and price
+Checker.java: a class used to calculate the score for each child and city based on the input data
+The project also includes a set of input files (test*.json) that can be used to test the program.
 
-Checker
-This class contains the methods used to calculate the score of each child.
+How to Use
+To run the program, simply compile and run the Main.java class. The program will read the input data from the test*.json files and calculate the score for each child and city based on the input data. The program will then output the results to the console.
 
-Input
-This class represents the input data read from the JSON files.
+Dependencies
+The project uses the following dependencies:
 
-Output
-This class represents the output data calculated by the program.
-
-Child
-This class represents a child and contains information about their age, behavior, and gift preferences.
-
-ChildUpdate
-This class represents an update to a child's behavior or gift preferences.
-
-Score
-This class represents the score of a child.
-
-Present
-This class represents a gift.
-
-City
-This class represents a city and contains information about the average score of its children.
+com.fasterxml.jackson.databind.ObjectMapper: a library used to read the input data from the test*.json files
+To compile and run the program, make sure that these dependencies are installed and included in the classpath.
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
